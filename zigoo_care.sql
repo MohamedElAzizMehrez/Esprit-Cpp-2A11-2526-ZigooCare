@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  Fichier créé - jeudi-juin-04-2026   
+--  Fichier crï¿½ï¿½ - jeudi-juin-04-2026   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table SEWER
@@ -134,24 +134,24 @@ Insert into ZIGOOCARE.SEWER (SEWER_ID,LOCATION,MAX_CAPACITY,CURRENT_CAPACITY,WAT
 REM INSERTING into ZIGOOCARE.MUNICIPALITY
 SET DEFINE OFF;
 Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (1,'Ariana','Ariana','Palais de la municipalite, Avenue du 18 Janvier 1952, 2080 Ariana, Tunisie','+216 71 711 100','webmaster@commune-ariana.gov.tn','10.1893158','36.8579558',3000);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (2,'Kairouan','Kairouan','Avenue de la République, 3100 Kairouan, Tunisie','+216 77 227 300','commune.kairouan@planet.tn','10.0963','35.6781',8000);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (2,'Kairouan','Kairouan','Avenue de la Rï¿½publique, 3100 Kairouan, Tunisie','+216 77 227 300','commune.kairouan@planet.tn','10.0963','35.6781',8000);
 Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (3,'Sfax','Sfax','Avenue Habib Bourguiba, Sfax','+216 74 296 666','commune.sfax@topnet.tn','10.7603','34.7406',2500);
 Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (4,'Bizerte','Bizerte','Avenue Habib Bourguiba, 7000 Bizerte, Tunisie','+216 72 422 000','commune.bizerte@planet.tn','9.8739','37.2744',10000);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (5,'Sousse','Sousse','Place de la Municipalité, 4000 Sousse, Tunisie','+216 73 225 411','commune.sousse@topnet.tn','10.6360','35.8256',10000);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (6,'Gabes','Gabès','Centre Ville, Gabes','+216 75 274 000','commune.gabes@topnet.tn','10.0982','33.8815',2800);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (7,'Aousja','Bizerte','Municipalité d’Aousja, Tunisie','12345678','aousja@gmail.com','9.58','37.06',8000);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (8,'Ghar El Melh','Bizerte','Municipalité de Ghar El Melh, Tunisie','90006520','gharilmeleh@gmail.com','9.70','37.18',8000);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (5,'Sousse','Sousse','Place de la Municipalitï¿½, 4000 Sousse, Tunisie','+216 73 225 411','commune.sousse@topnet.tn','10.6360','35.8256',10000);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (6,'Gabes','Gabï¿½s','Centre Ville, Gabes','+216 75 274 000','commune.gabes@topnet.tn','10.0982','33.8815',2800);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (7,'Aousja','Bizerte','Municipalitï¿½ dï¿½Aousja, Tunisie','12345678','aousja@gmail.com','9.58','37.06',8000);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (8,'Ghar El Melh','Bizerte','Municipalitï¿½ de Ghar El Melh, Tunisie','90006520','gharilmeleh@gmail.com','9.70','37.18',8000);
 Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (9,'Le Kef','Le Kef','Centre Ville, Le Kef','+216 78 228 222','commune.kef@topnet.tn','8.7049','36.1742',2000);
-Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (11,'Siliana','Siliana','Avenue de la République, Siliana','+216 78 871 222','commune.siliana@planet.tn','9.3667','36.0833',2300);
+Insert into ZIGOOCARE.MUNICIPALITY (MUNICIPALITY_ID,NAME,REGION,ADDRESS,PHONE,EMAIL,LONGITUDE,LATITUDE,RADIUS) values (11,'Siliana','Siliana','Avenue de la Rï¿½publique, Siliana','+216 78 871 222','commune.siliana@planet.tn','9.3667','36.0833',2300);
 REM INSERTING into ZIGOOCARE.RECYCLING_CENTER
 SET DEFINE OFF;
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (1,'Center Ariana','Pole Technologique, Cite El Ghazela','maquette@esprit.tn',200,90,'Active',1);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (2,'ANGed','6 Rue Al amine Al Abbassi 100 le belvedere tunis','azizmehrez@gmail.com',10,6,'Active',3);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (3,'Eco Group Tunisie','ZI Thyna 1, Sfax','hammamimaissa04@gmail.com',100,50,'Saturated',3);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (4,'TD Recycling','Zone industrielle 20 Mars, Sejoumi, Tunis','youssef.bouchehioua@esprit.tn',100,48,'Active',null);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (5,'Carthage Marine','CarthageAmilcar av.Mohamed Ali , Tunis','medazizdarnaoui@gmail.com',200,21,'Saturated',4);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (6,'SOREAL','Zone industrielle Enfidha, Sousse','bouchehiouay@gmail.com',200,193,'Active',5);
-Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (7,'ELEC RECYCLAGE','ZI Utique Lot N50 - 7060 Bizerte','hammami.maissa@esprit.tn',620,200,'Active',4);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (1,'Center Ariana','Pole Technologique, Cite El Ghazela','maquette@zigoocare.tn',200,90,'Active',1);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (2,'ANGed','6 Rue Al amine Al Abbassi 100 le belvedere tunis','azizmehrez@zigoocare.com',10,6,'Active',3);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (3,'Eco Group Tunisie','ZI Thyna 1, Sfax','hammamimaissa04@zigoocare.com',100,50,'Saturated',3);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (4,'TD Recycling','Zone industrielle 20 Mars, Sejoumi, Tunis','youssef.bouchehioua@zigoocare.tn',100,48,'Active',null);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (5,'Carthage Marine','CarthageAmilcar av.Mohamed Ali , Tunis','medazizdarnaoui@zigoocare.com',200,21,'Saturated',4);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (6,'SOREAL','Zone industrielle Enfidha, Sousse','bouchehiouay@zigoocare.com',200,193,'Active',5);
+Insert into ZIGOOCARE.RECYCLING_CENTER (CENTER_ID,NAME,ADDRESS,EMAIL,MAX_CAPACITY,CURRENT_CAPACITY,STATUS,MUNICIPALITY_ID) values (7,'ELEC RECYCLAGE','ZI Utique Lot N50 - 7060 Bizerte','hammami.maissa@zigoocare.tn',620,200,'Active',4);
 REM INSERTING into ZIGOOCARE.INTERVENES
 SET DEFINE OFF;
 Insert into ZIGOOCARE.INTERVENES (TEAM_ID,SEWER_ID,INTERVENTION_DATE,PRIORITY,STATUS) values (3,5,to_date('06-05-26','DD-MM-RR'),3,1);
@@ -176,11 +176,12 @@ Insert into ZIGOOCARE.INTERVENES (TEAM_ID,SEWER_ID,INTERVENTION_DATE,PRIORITY,ST
 Insert into ZIGOOCARE.INTERVENES (TEAM_ID,SEWER_ID,INTERVENTION_DATE,PRIORITY,STATUS) values (3,7,to_date('07-05-26','DD-MM-RR'),5,1);
 REM INSERTING into ZIGOOCARE.EMPLOYEE
 SET DEFINE OFF;
-Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (1,'12345678','Mohamed El Aziz','Mehrez','Human Resources','azizm@email.tn','983ee0a40fcefb0ab897a7ec6ba4378ff0300b3aa2c1b81a13398c7b98114153','Who is the HR manager?','cf9ab90b99dcf582c35bc89edd0281055bed9388b5c68dcc103faaeb6596bbc6',3);
-Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (2,'23456789','Mohamed Aziz','Darnaoui','Municipal Oversight','azizda@email.tn','3479f946d5f0c1c04c708e9b917ff9b69d32d397370f8dd3de5a1e743415d4f0','Who is the municipal oversight?','655c0a3e3f6c286e6c4b97ea26957615c95acc87da2c1291f3aff53a10bc525a',5);
-Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (3,'85172155','Maissa','Hammami','Ministry Agent','maissah@email.tn','b850c4910dbfecfdf44da70bff400a9bdcaacde28f804ef136e195c09622d8c6','Who is the ministry agent?','21a0c6bd0c78e783bccb0efa7e8ab10ca82dd41649cfbe3b200143f071d41e5f',1);
-Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (4,'17515625','Zayneb','Hergli','Operations Manager','zaynebh@email.tn','b6ee7eaea8a181c38c9e8b88e1b1dc7badaabf5c17dc24d0a2db0d1574b6689a','Who is the operations manager?','fb63f214300e00ecf18e44948fcfc68b499b52b83f9a73a2d913213044ed6691',4);
-Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (6,'00000000','Admin','Admin','System Administrator','admin@email.tn','ab5617d984e2e198df119b227f90abb79cc2194677535905630d32382c7a73a6','Who is the admin?','7b2b5f7574ac8ee0dc253b0dbb1272610aa0c159143591636ee75fdc49cff79e',null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (1,'12345678','Mohamed El Aziz','Mehrez','Human Resources','azizm@email.tn',null,null,null,null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (2,'23456789','Mohamed Aziz','Darnaoui','Municipal Oversight','azizda@email.tn',null,null,null,null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (3,'85172155','Maissa','Hammami','Ministry Agent','maissah@email.tn',null,null,null,null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (4,'17515625','Zayneb','Hergli','Operations Manager','zaynebh@email.tn',null,null,null,null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (5,'13518625','Youssef','Bouchehioua','Center Representative','youssefb@email.tn',null,null,null,null);
+Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (6,'00000000','Admin','Admin','System Administrator','admin@email.tn',null,null,null,null);
 Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (7,'22222222','Yasmine','Jazi','Operations Manager','yasjazi@email.tn',null,null,null,null);
 Insert into ZIGOOCARE.EMPLOYEE (EMPLOYEE_ID,NIC,FIRST_NAME,LAST_NAME,POSITION,EMAIL,PASSWORD,QUESTION,ANSWER,FINGERPRINT) values (8,'11111111','Meliha','Ben Salem','System Administrator','melihabs@email.tn',null,null,null,null);
 REM INSERTING into ZIGOOCARE.COLLECTION_TEAM
