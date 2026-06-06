@@ -110,10 +110,10 @@ Makefile*
 *.dll
 *.exe
 
-models/*.pkl
-models/*.joblib
-data/*.csv
-data/*.xlsx
+*.pkl
+*.joblib
+*.csv
+*.xlsx
 __pycache__/
 *.pyc
 .env

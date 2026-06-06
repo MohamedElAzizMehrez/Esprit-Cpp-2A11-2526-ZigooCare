@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>login_bg.png</file>
+        <file>logo_untitled.png</file>
+        <file>interior_ministry.webp</file>
+        <file>budget_m.png</file>
+        <file>confirm_m.png</file>
+        <file>dashboard_m.png</file>
+        <file>map_icon_m.png</file>
+        <file>pdf_m.png</file>
+        <file>confirm_c1.png</file>
+        <file>boule bleu_r.png</file>
+        <file>boule gris_r.png</file>
+        <file>boule verte_r.png</file>
+        <file>eye-icon.png</file>
+        <file>loca_m.png</file>
+        <file>fingerprint.png</file>
+        <file>SDG.png</file>
+        <file>assistantvocal_transparent.png</file>
+    </qresource>
+    <qresource prefix="/fichier">
+        <file>map.qml</file>
+        <file>map_loc.qml</file>
+    </qresource>
+</RCC>
