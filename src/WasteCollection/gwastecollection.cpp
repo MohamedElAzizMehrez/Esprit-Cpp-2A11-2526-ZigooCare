@@ -4547,7 +4547,7 @@ void GWasteCollection::on_pushButton_environmentPredict_S1_clicked()
     );
 
     QString scriptPath = QDir(aiFolder).filePath("predict_sewer_environment.py");
-    QString modelPath  = QDir(aiFolder).filePath("sewer_environment_model.pkl");
+   QString modelPath = QDir(aiFolder).filePath("models/sewer_environment_model.pkl");
 
     if (!QFileInfo::exists(scriptPath))
     {
@@ -4927,7 +4927,6 @@ void GWasteCollection::on_pushButton_confirm_map_s1_clicked()
     // Revenir au formulaire
     ui->stackedWidget_form_s1->setCurrentIndex(0);
 }
-
 //-----------------------------------------------------------------------------------------------------------------
 //----------------------------------------------CollectionTeam Module---------------------------------------------
 //---------------------------------------------------------------------------------------------------------------

@@ -7,7 +7,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 
-DATASET_FILE = "sewer_ai_dataset_augmented_excel.csv"
+BASE_DIR = Path(__file__).resolve().parent
+DATASET_FILE = BASE_DIR / "data" / "sewer_ai_dataset_augmented_excel.csv"
+MODEL_FILE = BASE_DIR / "models" / "sewer_environment_model.pkl"
 
 if not Path(DATASET_FILE).exists():
     raise FileNotFoundError(f"Fichier introuvable : {DATASET_FILE}")
@@ -81,6 +83,6 @@ print(confusion_matrix(y_test, y_pred))
 
 
 
-joblib.dump(model, "sewer_environment_model.pkl")
+joblib.dump(model, MODEL_FILE)
 
-print("\nModèle sauvegardé avec succès : sewer_environment_model.pkl")
+print(f"\nModèle sauvegardé avec succès : {MODEL_FILE}")

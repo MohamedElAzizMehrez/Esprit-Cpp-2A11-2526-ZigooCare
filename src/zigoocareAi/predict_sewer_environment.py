@@ -1,12 +1,12 @@
 import sys
 import pandas as pd
 import joblib
+from pathlib import Path
 
-
-MODEL_FILE = "sewer_environment_model.pkl"
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_FILE = BASE_DIR / "models" / "sewer_environment_model.pkl"
 
 model = joblib.load(MODEL_FILE)
-
 if len(sys.argv) != 6:
     print("Erreur: vous devez entrer 5 valeurs.")
     print("Usage:")

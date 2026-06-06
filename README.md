@@ -161,12 +161,6 @@ After downloading the dataset, place it inside:
 zigoocareAi/data/
 ```
 
-A small sample dataset is provided in:
-
-```txt
-zigoocareAi/data/sample/
-```
-
 ## Database Setup
 
 This project uses an Oracle Database.
