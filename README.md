@@ -67,6 +67,7 @@ Database: Oracle Database
 Python Version: Python 3.14.4
 ```
 
+---
 
 ## Prerequisites
 
@@ -80,10 +81,14 @@ Before running the project, make sure the following tools are installed:
 - Python 3.14.4
 - Git
 - Ollama, required only for the voice assistant
+- Working microphone
+- Internet access for speech recognition
 
 ---
 
 ## Installation
+
+Complete all the installation steps below before running or testing the application.
 
 ### 1. Clone the Repository
 
@@ -92,17 +97,30 @@ git clone https://github.com/MohamedElAzizMehrez/Esprit-Cpp-2A11-2526-ZigooCare.
 cd Esprit-Cpp-2A11-2526-ZigooCare
 ```
 
+---
+
 ### 2. Create the Local Environment File
 
 The repository contains a `.env.example` file.
 
 Create a local `.env` file from `.env.example`:
 
-```bash
+```powershell
 Copy-Item .env.example .env
 ```
 
 Then open `.env` and replace the placeholder values with your own local configuration.
+
+Example `.env` configuration:
+
+```env
+ODBC_SOURCE_NAME=YOUR_ODBC_SOURCE_NAME
+DB_USER=YOUR_ORACLE_USERNAME
+DB_PASSWORD=YOUR_ORACLE_PASSWORD
+OLLAMA_MODEL=llama3.2:3b
+MODEL_PATH=models/sewer_environment_model.pkl
+DATASET_PATH=data/sewer_ai_dataset_augmented_excel.csv
+```
 
 ---
 
@@ -110,11 +128,10 @@ Then open `.env` and replace the placeholder values with your own local configur
 
 Open PowerShell in the project folder and run:
 
-```bash
-cd zigoocareAi
+```powershell
+cd src/zigoocareAi
 py -m pip install --upgrade pip
 py -m pip install -r requirements.txt
-cd ..
 ```
 
 ---
@@ -161,20 +178,20 @@ After downloading the dataset, place it inside:
 zigoocareAi/data/
 ```
 
-## Database Setup
+---
 
-This project uses an Oracle Database.
+### 6. Set Up the Oracle Database
 
-To run the application correctly, the database must be created before launching the Qt project.
+This project uses an Oracle Database. The database must be created before launching the Qt application.
 
-### Database Requirements
+Database requirements:
 
 - Oracle Database
 - Oracle SQL Developer or any Oracle-compatible SQL tool
 - Oracle ODBC driver
 - SQL script provided in the project repository
 
-### Database Installation Steps
+Database setup steps:
 
 1. Open Oracle SQL Developer.
 2. Create or connect to an Oracle user/schema.
@@ -205,13 +222,15 @@ DB_USER=YOUR_ORACLE_USERNAME
 DB_PASSWORD=YOUR_ORACLE_PASSWORD
 ```
 
-## Qt Installation
+---
+
+### 7. Install Qt and the Required Qt Components
 
 This project was developed using Qt Creator and Qt 6.7.3.
 
 To install Qt:
 
-1. Download the Qt online installer from the official Qt website.
+1. Download the Qt Online Installer from the official Qt website.
 2. Run the installer.
 3. Log in or create a Qt account.
 4. Choose a custom installation.
@@ -222,7 +241,15 @@ To install Qt:
 MinGW 11.2.0 64-bit
 ```
 
-7. Install the required Qt modules:
+7. Install the required Qt components:
+
+```txt
+Qt 6.7.3
+MinGW 11.2.0 64-bit
+Additional Libraries
+```
+
+The project requires the following Qt modules:
 
 ```txt
 Qt Charts
@@ -235,49 +262,144 @@ Qt Quick
 Qt Quick Widgets
 ```
 
-8. Finish the installation.
-9. Open the project file in Qt Creator:
-
-```txt
-WasteCollection.pro
-```
-
-10. Run the following steps in Qt Creator:
-
-```txt
-Run qmake
-Build
-Run
-```
+8. Finish the Qt installation.
 
 ---
 
-## Running the Application
+### 8. Install Ollama for the Voice Assistant
 
-To run the complete ZigooCare desktop application:
+Ollama is required only for the ZigooBot voice assistant.
 
-1. Make sure Oracle Database is installed and configured.
-2. Make sure the SQL script has been executed:
+On Windows, Ollama can be installed from the official Ollama website or by running the following command in PowerShell:
+
+```powershell
+irm https://ollama.com/install.ps1 | iex
+```
+
+After installation, close PowerShell and open it again, then verify the installation:
+
+```powershell
+ollama --version
+```
+
+Ollama for Windows requires Windows 10 or later.
+
+Download the required local model:
+
+```powershell
+ollama pull llama3.2:3b
+```
+
+To test the model:
+
+```powershell
+ollama run llama3.2:3b
+```
+
+Ollama installation and model download may take around 10 to 25 minutes depending on the internet connection.
+
+---
+
+
+## Testing the Application
+
+Before testing, make sure that:
+
+- Oracle Database is installed and configured.
+- The SQL script has been executed:
 
 ```txt
 zigoo_care.sql
 ```
 
-3. Make sure the local `.env` file exists and contains your Oracle configuration.
-4. Make sure the AI model file exists at:
+- The local `.env` file exists and contains your Oracle configuration.
+- The AI model file exists at:
 
 ```txt
 zigoocareAi/models/sewer_environment_model.pkl
 ```
 
-5. Open Qt Creator.
-6. Open the project file:
+- The dataset file exists at:
+
+```txt
+zigoocareAi/data/sewer_ai_dataset_augmented_excel.csv
+```
+
+### Test the Environmental AI Prediction Locally
+
+Open PowerShell and run:
+
+```powershell
+cd zigoocareAi
+py predict_sewer_environment.py 1000 700 60 70 1
+```
+
+Arguments:
+
+```txt
+py predict_sewer_environment.py <max_capacity> <current_capacity> <water_level> <blockage_rate> <municipality_id>
+```
+
+Example:
+
+```txt
+max_capacity = 1000
+current_capacity = 700
+water_level = 60
+blockage_rate = 70
+municipality_id = 1
+```
+
+Expected output format:
+
+```txt
+Status;Confidence
+```
+
+Example output:
+
+```txt
+Poor;0.85
+```
+
+### Test ZigooBot
+
+1. Launch the ZigooCare desktop application.
+2. Click on the ZigooBot voice assistant button.
+3. Ask a question using the microphone.
+4. The assistant generates an answer based on the current ZigooCare data.
+
+Example questions:
+
+```txt
+What is the most critical sewer?
+Give me a summary of the sewer situation.
+Is there a flood risk?
+Which sewer needs urgent intervention?
+```
+
+The voice assistant must be tested locally because it depends on the microphone, the Qt desktop interface, and the local Ollama installation.
+
+---
+
+## Running the Application
+
+After completing all installation steps, run the ZigooCare desktop application from Qt Creator.
+
+1. Open Qt Creator.
+2. Open the project file:
 
 ```txt
 WasteCollection.pro
 ```
 
-7. Run:
+3. Select the Qt kit:
+
+```txt
+Qt 6.7.3 MinGW 11.2.0 64-bit
+```
+
+4. Run the following steps in Qt Creator:
 
 ```txt
 Run qmake
@@ -285,7 +407,7 @@ Build
 Run
 ```
 
-8. The ZigooCare desktop application will start.
+5. The ZigooCare desktop application will start.
 
 ---
 
@@ -327,43 +449,6 @@ Model output:
 - Predicted sewer status
 - Confidence score
 
-### Run Environmental AI Prediction Locally
-
-Open PowerShell and run:
-
-```bash
-cd zigoocareAi
-py predict_sewer_environment.py 1000 700 60 70 1
-```
-
-Arguments:
-
-```txt
-py predict_sewer_environment.py <max_capacity> <current_capacity> <water_level> <blockage_rate> <municipality_id>
-```
-
-Example:
-
-```txt
-max_capacity = 1000
-current_capacity = 700
-water_level = 60
-blockage_rate = 70
-municipality_id = 1
-```
-
-Expected output format:
-
-```txt
-Status;Confidence
-```
-
-Example output:
-
-```txt
-Poor;0.85
-```
-
 ### AI Model Performance
 
 ```txt
@@ -379,85 +464,20 @@ The Environmental AI prediction model can be tested online using Google Colab:
 
 ---
 
-## Ollama Voice Assistant Setup
+## ZigooBot Voice Assistant
 
 ZigooCare includes a voice assistant called ZigooBot.
 
 The voice assistant allows the user to ask questions using the microphone. The question is converted into text, then sent to a local Ollama model together with the ZigooCare application context.
 
-### Voice Assistant Requirements
-
-To use the voice assistant, the following elements are required:
-
-- Python dependencies installed
-- Working microphone
-- Internet access for speech recognition
-- Ollama installed locally
-- `llama3.2:3b` model downloaded locally
-
-### Install Ollama
-
-Ollama must be installed locally before using the voice assistant.
-
-On Windows, Ollama can be installed from the official Ollama website or by running the following command in PowerShell:
-
-```bash
-irm https://ollama.com/install.ps1 | iex
-```
-
-After installation, close PowerShell and open it again, then verify the installation:
-
-```bash
-ollama --version
-```
-
-Ollama for Windows requires Windows 10 or later.
-
-### Install the Ollama Model
-
-Download the required local model:
-
-```bash
-ollama pull llama3.2:3b
-```
-
-To test the model:
-
-```bash
-ollama run llama3.2:3b
-```
-
-### How to Use ZigooBot
-
-1. Launch the ZigooCare desktop application.
-2. Click on the ZigooBot voice assistant button.
-3. Ask a question using the microphone.
-4. The assistant generates an answer based on the current ZigooCare data.
-
-Example questions:
-
-```txt
-What is the most critical sewer?
-Give me a summary of the sewer situation.
-Is there a flood risk?
-Which sewer needs urgent intervention?
-```
-
-### Important Note
-
-Ollama installation and model download may take around 10 to 25 minutes depending on the internet connection.
-
-The voice assistant must be tested locally because it depends on the microphone, the Qt desktop interface, and the local Ollama installation.
 
 ---
-
 
 ## Demo
 
 ### Application Demo
 
 A demonstration of the ZigooCare desktop application is available in the `demo/` folder.
-
 
 ### Online AI Demo
 
@@ -466,6 +486,7 @@ The Environmental AI prediction model can be tested online using Google Colab:
 [Open ZigooCare AI Demo on Google Colab](https://colab.research.google.com/drive/1ZB9mTfs6sCUp3hOrm3CUO8M5r5GIuAt0?usp=sharing)
 
 ---
+
 ## License
 
 All rights reserved.
@@ -476,12 +497,15 @@ No use, copy, modification, distribution, publication, commercialization, or der
 
 See the [LICENSE](LICENSE) file for details.
 
+---
+
 ## Authors
 
 ZigooCare — 2A11 — 2025/2026  
 Tutor: Soumaya Argoubi
 
 Team members:
+
 - [Youssef Bouchehioua](https://github.com/Joe06-b)
 - [Mohamed Aziz Darnaoui](https://github.com/medazizdarnaoui)
 - [Maissa Hammami](https://github.com/Maissahm)
