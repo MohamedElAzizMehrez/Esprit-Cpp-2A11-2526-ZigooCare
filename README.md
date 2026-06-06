@@ -88,8 +88,8 @@ Before running the project, make sure the following tools are installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/USERNAME/Esprit-PI-2A11-2526-ZigooCare.git
-cd Esprit-PI-2A11-2526-ZigooCare
+git clone https://github.com/MohamedElAzizMehrez/Esprit-Cpp-2A11-2526-ZigooCare.git
+cd Esprit-Cpp-2A11-2526-ZigooCare
 ```
 
 ### 2. Create the Local Environment File
